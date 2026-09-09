@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content to Flowchart"
+  short_description: "Turn text into editable Mermaid diagrams and PNGs"
+  default_prompt: "Use $content-to-flowchart to organize this content into an editable diagram and a PNG image."
