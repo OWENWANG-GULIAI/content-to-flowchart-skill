@@ -1,0 +1,11 @@
+flowchart TD
+    start([员工提交采购申请]) --> verify[采购专员核验预算与资料]
+    verify --> complete{资料是否齐全？}
+    complete -- 否 --> supplement[退回员工补充资料]
+    supplement --> verify
+    complete -- 是 --> approve[部门负责人审批]
+    approve --> approved{审批是否通过？}
+    approved -- 否 --> notify[通知员工审批不通过]
+    notify --> finish([流程结束])
+    approved -- 是 --> order[采购专员创建采购订单]
+    order --> finish
