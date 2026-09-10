@@ -45,8 +45,9 @@ test('approval fixture is a complete editable flow with a safe return loop', (t)
   assert.match(source, /补充资料/);
   assert.match(source, /创建采购订单/);
 
-  const pngPath = process.env.FLOWCHART_PNG;
-  if (!pngPath) {
+  const pngPath = process.env.FLOWCHART_PNG
+    || path.join(root, 'tests/fixtures/content-to-flowchart/approval-flow.png');
+  if (!existsSync(pngPath)) {
     t.skip('renderer smoke path not supplied');
     return;
   }
