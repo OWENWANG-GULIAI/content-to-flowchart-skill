@@ -5,7 +5,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const skillRoot = path.join(root, 'content-to-flowchart');
+const skillRoot = root;
 const requiredFiles = [
   'SKILL.md',
   'agents/openai.yaml',
